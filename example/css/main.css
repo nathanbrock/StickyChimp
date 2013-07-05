@@ -1,0 +1,69 @@
+html, body {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Helvetica Neue",Arial,Helvetica,sans-serif;
+    color: #434343;
+    background-color: #FEFEFE;
+}
+
+h1 {
+    color: #232323;
+}
+
+a {
+    color: #535353;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.content {
+    padding: 0;
+}
+
+.hero {
+    background-color: #C06C84;
+    padding: 30px;
+    padding-top: 90px;
+    text-align: center;
+}
+
+.copy {
+    width: 960px;
+    margin: 0 auto;
+    height: 2000px;
+}
+
+.copy img {
+    padding: 5px;
+    border: 1px solid #F8B195;
+    height:;
+}
+
+.menu-wrap {
+    top: 0px;
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    position: fixed;
+    -webkit-box-shadow: 0 1px 1px rgba(6,8,8,0.1);
+    box-shadow: 0 1px 1px rgba(6,8,8,0.1);
+}
+
+ul.menu {
+    padding: 0 0 0 30px;
+    margin: 0;
+}
+
+.menu li {
+    width: 8%;
+    height: 60px;
+    line-height: 60px;
+    float: left;
+    list-style: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+.menu li:hover {
+    background-color: #EEE;
+}
