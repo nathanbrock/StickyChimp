@@ -1,0 +1,26 @@
+{
+    "name": "stickychimp",
+    "title": "jQuery StickyChimp",
+    "description": "jQuery plugin to mimic the functionality of the sticky menu found at http://www.mailchimp.com.",
+    "keywords": [
+        "menu",
+        "sticky"
+    ],
+    "version": "0.1.0",
+    "author": {
+        "name": "nbrock",
+        "url": "https://github.com/nbrock"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://github.com/nbrock/StickyChimp/blob/master/LICENSE.md"
+        }
+    ],
+    "bugs": "https://github.com/nbrock/StickyChimp/issues",
+    "homepage": "https://github.com/nbrock/StickyChimp",
+    "download": "https://github.com/nbrock/StickyChimp/archive/master.zip",
+    "dependencies": {
+        "jquery": ">=1.5"
+    }
+}
