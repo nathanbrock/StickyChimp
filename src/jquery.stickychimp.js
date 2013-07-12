@@ -9,7 +9,7 @@
 		this.options = $.extend(defaults, options);
 		this.el = el;
 
-		this.elementHeight = el.height() * 2;
+		this.elementHeight = el.height();
 		this.elementTop = parseInt(el.css('top'), 10);
 		this.documentHeight = $(document).height();
 		this.windowHeight = $(window).height();
@@ -33,16 +33,18 @@
 	};
 
 	StickyChimp.prototype.hideMenu = function() {
-		$(this.el).animate({
+		$(this.el).stop().animate({
 			opacity: 0,
 			top: '-=' + this.elementHeight
-		}, this.options.animateTime);
+		}, this.options.animateTime, function() {
+			$(this).css('top');
+		});
 	};
 
-	StickyChimp.prototype.showMenu = function() {
-		$(this.el).animate({
+	StickyChimp.prototype.showMenu = function(fromTop) {
+		$(this.el).stop().animate({
 			opacity: 1,
-			top: this.elementTop
+			top: this.elementTop > 0 && fromTop < this.elementTop ? this.elementTop : 0
 		}, this.options.animateTime);
 	};
 
@@ -56,8 +58,22 @@
 		fromTop = $(window).scrollTop(),
 		atBottom = fromTop >= (this.documentHeight - this.windowHeight - 5);
 
-		if((now - this.lastScroll < 250)) {
-			return;
+		if(this.elementTop === 0) {
+			// If element top is 0 we can defer the scroll events and reduce methods fired.
+			if((now - this.lastScroll < 250)) {
+				return;
+			}
+		} else {
+			// However due to continue change in the menu position when scrolling we need to fire 
+			// each of the scroll events when the menu top is > 0 ensuring smooth animation.
+			var adjustedTop = fromTop < 0 ? 0 : fromTop;
+			$(this.el).css('top', fromTop > this.elementTop ? 0 : this.elementTop - adjustedTop);
+		}
+
+		// Clear animation queue and set to visible if user hits the top of the page suddenly.
+		if(fromTop <= 0) {
+			$(this.el).stop(true);
+			$(this.el).show().fadeTo(0, 1).css('top', this.elementTop);
 		}
 
 		if (!atBottom && fromTop > this.lastFromTop) {
