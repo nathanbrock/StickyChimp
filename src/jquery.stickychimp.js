@@ -104,4 +104,12 @@
 		new StickyChimp(this, options);
 	};
 
+	$(window).on('load', function () {
+		$('[data-toggle="stickychimp"]').each(function () {
+			var el = $(this);
+
+			new StickyChimp(el, el.data());
+		});
+	});	
+
 }(jQuery));
