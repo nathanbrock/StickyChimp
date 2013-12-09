@@ -10,4 +10,30 @@ You can find a demo of StickyChimp at [http://nbrock.github.io/StickyChimp](http
 
 The menu element you use StickyChimp upon needs to be __position: fixed__.
 
-	$('.nav').stickychimp();
+### Data Attributes
+
+You can use this plugin purely through the markup API without writing a single line of JavaScript. This should be your first consideration when using the plugin.
+
+To activate without writing JavaScript. Add ```data-toggle="stickychimp"``` to the element upon which you want to enable the plugin.
+
+```html
+<nav class="navbar" data-toggle="stickychimp">
+	...
+</nav>
+```
+
+### Programmatic API
+
+That said, in some situations it may be desirable to enable the plugin in a more traditional manor using the programmatic API.
+
+```html
+<nav class="navbar">
+	...
+</nav>
+
+<script>
+	$(document).ready(function() {
+		$('.navbar').stickychimp();
+	});
+</script>
+```

@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="css/main.css">
     </head>
     <body>
-    	<div class="menu-wrap">
+    	<div class="menu-wrap" data-toggle="stickychimp">
             <ul class="menu">
                 <li><a>Home</a></li>
                 <li><a>Banana</a></li>
@@ -30,11 +30,13 @@
 
                 <p>StickyChimp is a jQuery plugin which mimics the sticky menu functionality found on the new MailChimp website (<a href="http://www.mailchimp.com">http://www.mailchimp.com</a>). The menu is hidden as you start to scroll down the page and your focus moves to the content itself. If you start to scroll back to the top of the page (where the menu normally resides) or reach the bottom of the page the menu will reappear.</p>
 
-                <p>Using the plugin is simple, call the StickyChimp plugin on your menu element (that is <code>position: fixed</code>) and away you go. </p>
+                <p>To activate without writing JavaScript. Add <code>data-toggle="stickychimp"</code> to the element upon which you want to enable the plugin. (that is one which is <code>position: fixed</code>).</p>
 
                 <p><strong>Example</strong></p>
 
-                <p><code class="code-block">$('.menu-wrap').stickychimp();</code></p>
+                <p>
+                    <code class="code-block">&lt;div class="menu-wrap" data-toggle="stickychimp"&gt;&lt;/div&gt;</code>
+                </p>
 
                 <p><strong>Questions / Issues?</strong></p>
 
@@ -85,10 +87,5 @@
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script src="../src/jquery.stickychimp.min.js"></script>
-        <script type="text/javascript">
-            $(document).ready(function() {
-                $('.menu-wrap').stickychimp();
-            });
-        </script>
     </body>
 </html>

@@ -6,11 +6,18 @@
         "menu",
         "sticky"
     ],
-    "version": "0.1.0",
+    "version": "0.2.0",
     "author": {
         "name": "nbrock",
         "url": "https://github.com/nbrock"
     },
+    "contributors": [
+        { 
+            "name" : "Robert Rawlins",
+            "email" : "robert@weboffins.com",
+            "url" : "http://rawlins.weboffins.com"
+        }
+    ],
     "licenses": [
         {
             "type": "MIT",
