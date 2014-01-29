@@ -1,7 +1,5 @@
 (function ($) {
 	"use strict";
-	
-	alert('banana');
 
 	var defaults = {
 		animateTime: 300
