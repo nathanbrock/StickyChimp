@@ -1,6 +1,6 @@
 (function ($) {
 	"use strict";
-
+	
 	var defaults = {
 		animateTime: 300
 	};
