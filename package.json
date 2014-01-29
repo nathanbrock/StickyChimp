@@ -1,0 +1,53 @@
+{
+  "name": "jquery.stickychimp",
+  "title": "jQuery StickyChimp",
+  "version": "0.3.0",
+  "description": "jQuery plugin to mimic the functionality of the sticky menu found at http://www.mailchimp.com.",
+  "keywords": [
+    "menu",
+    "sticky"
+  ],
+  "author": {
+    "name": "nbrock",
+    "url": "https://github.com/nbrock"
+  },
+  "maintainers": [
+    {
+      "name": "Robert Rawlins",
+      "email": "robert@weboffins.com",
+      "url": "http://rawlins.weboffins.com"
+    }
+  ],
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/nbrock/StickyChimp/blob/master/LICENSE.md"
+    }
+  ],
+  "bugs": "https://github.com/nbrock/StickyChimp/issues",
+  "homepage": "https://github.com/nbrock/StickyChimp",
+  "download": "https://github.com/nbrock/StickyChimp/archive/master.zip",
+  "dependencies": {
+    "jquery": ">=1.5"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-copy": "~0.4.0",
+    "grunt-contrib-uglify": "~0.2.0",
+    "grunt-contrib-jshint": "~0.5.4",
+    "grunt-contrib-clean": "0.4.0",
+    "grunt-contrib-qunit": "~0.4.0",
+    "grunt-contrib-compress": "~0.6.0",
+    "grunt-bump": "0.0.13",
+    "grunt-gh-pages": "~0.9.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-connect": "~0.6.0",
+    "grunt-jquerymanifest": "~0.1.4",
+    "grunt-bumper": "~1.0.2",
+    "grunt-open": "~0.2.3",
+    "connect-livereload": "~0.3.2"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  }
+}
