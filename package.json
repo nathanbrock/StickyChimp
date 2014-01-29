@@ -1,7 +1,7 @@
 {
   "name": "jquery.stickychimp",
   "title": "jQuery StickyChimp",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "jQuery plugin to mimic the functionality of the sticky menu found at http://www.mailchimp.com.",
   "keywords": [
     "menu",
