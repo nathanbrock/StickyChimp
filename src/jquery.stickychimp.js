@@ -6,6 +6,7 @@
 	};
 
 	var StickyChimp = function(el, options) {
+		console.log('sticky');
 		this.options = $.extend(defaults, options);
 		this.el = el;
 
@@ -57,7 +58,7 @@
 		var now = +new Date(),
 		fromTop = $(window).scrollTop(),
 		atBottom = fromTop >= (this.documentHeight - this.windowHeight - 5);
-
+		console.log('onscroll');
 		if(this.elementTop === 0) {
 			// If element top is 0 we can defer the scroll events and reduce methods fired.
 			if((now - this.lastScroll < 250)) {
@@ -68,6 +69,10 @@
 			// each of the scroll events when the menu top is > 0 ensuring smooth animation.
 			var adjustedTop = fromTop < 0 ? 0 : fromTop;
 			$(this.el).css('top', fromTop > this.elementTop ? 0 : this.elementTop - adjustedTop);
+		}
+
+		if(fromTop < 0) {
+			return;
 		}
 
 		// Clear animation queue and set to visible if user hits the top of the page suddenly.
@@ -83,7 +88,7 @@
 
 			if (!this.upperHit && (this.sclDown > this.elementHeight)) {
 				this.upperHit = true;
-				this.hideMenu();
+				this.hideMenu(fromTop);
 			}
 		} else {
 			this.sclDown = 0;
